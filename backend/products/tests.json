@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "name": "GET all products",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {"products": []},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "GET with category filter",
+      "method": "GET",
+      "path": "/?category=Одежда",
+      "expectedStatus": 200,
+      "expectedBody": {"products": []},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
